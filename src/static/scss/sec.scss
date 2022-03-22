@@ -1,0 +1,10 @@
+.sec{
+  &:not(:last-child){margin-bottom: $step-xxl;}
+  &:not(:first-child){margin-top: $step-xxl;}
+}
+.sec-title{
+  font-size: $txt-xl;
+  margin-bottom: $step-sm;
+  font-weight: 500;
+  color: $clr-txt-primery;
+}

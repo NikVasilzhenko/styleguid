@@ -1,0 +1,31 @@
+//header
+.header{
+  position: relative;
+  z-index: 300;
+  height: calc(#{$step-xxl} + (#{$step-md} * 2));
+  padding: $step-md $step-lg;
+  border-bottom: 1px solid $clr-border-primery;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__main,
+  &__bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-item{margin-left: $step-md;}
+  }
+  @media only screen and (max-width : 767px){
+    padding: $step-md;
+  }
+}
+
+//title
+.header-title{
+  font-size: $txt-xxl;
+  font-weight: 500;
+  @media only screen and (max-width : 767px){
+    font-size: $txt-lg;
+  }
+}
+

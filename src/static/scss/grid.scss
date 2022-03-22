@@ -1,0 +1,57 @@
+$columns: 12;
+$gutter: $step-sm;
+$gutter-column: $gutter / 2;
+$adaptive-breakpoints: (
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1180px,
+  'xxl': 1400px,
+);
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -$gutter-column;
+  margin-left: -$gutter-column;
+}
+
+.column,
+[class^='column-'] {
+  position: relative;
+  width: 100%;
+  padding: $gutter-column;
+}
+
+@each $size in map-keys($adaptive-breakpoints) {
+  @media (min-width: map_get($adaptive-breakpoints, $size)) {
+    @for $i from 1 through $columns {
+      .column-#{$size}-#{$i} {
+        flex: 0 0 percentage($i / $columns);
+        max-width: percentage($i / $columns);
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ex-content{
+  background-color: #ffb6c0;
+  padding: 8px;
+}

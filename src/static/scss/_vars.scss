@@ -1,0 +1,49 @@
+//цвета
+$clr-txt-primery:         #1e1f21;
+$clr-txt-primery-contr:   #f5f4f3;
+$clr-txt-secondary:       #6d6e6f;
+$clr-txt-secondary-contr: #6d6e6f;
+$clr-bg-primery:          #fff;
+$clr-bg-secondary:        #1e1f21;
+$clr-bg-primery-hover:    rgba(0, 0, 0, .16);
+$clr-bg-secondary-hover:  rgba(255, 255, 255, .16);
+$clr-placeholder:         $clr-txt-secondary;
+$clr-input:               $clr-txt-primery;
+$clr-border-primery:      #edeae9;
+$clr-border-secondary:    #424244;
+$clr-btn:                 #3A416F;
+$clr-btn-hover:           #282D4D;
+$clr-link:                #08A4E5;
+$clr-link-hover:          #3A416F;
+$clr-error:               #DB4437;
+
+//шрифты
+$font-main: 'Roboto', sans-serif;
+
+//размеры
+$bar-width: 240px;
+
+$step-xxs: 4px;
+$step-xs:  8px;
+$step-sm:  12px;
+$step-md:  16px;
+$step-lg:  24px;
+$step-xl:  32px;
+$step-xxl: 48px;
+
+$txt-sm:   12px;
+$txt-md:   14px;
+$txt-lg:   18px;
+$txt-xl:   24px;
+$txt-xxl:  32px;
+$txt-xxxl: 40px;
+
+//трагзишн
+$transition-time: .25s;
+
+//радиус
+$brs-btn: $step-xxs;
+
+//прозрачность
+$opacity-main: .46;
+$opacity-disabled: .25;

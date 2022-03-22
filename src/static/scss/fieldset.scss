@@ -1,0 +1,14 @@
+.fieldset{
+  @include fieldset-reset;
+  margin: $step-md 0;
+  &:first-child{margin-top: 0;}
+  &:last-child{margin-bottom: 0;}
+  
+}
+
+.legend{
+  display: block;
+  font-size: $txt-lg;
+  font-weight: bold;
+  margin: $step-sm 0;
+}

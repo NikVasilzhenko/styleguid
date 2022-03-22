@@ -1,0 +1,79 @@
+/*buttons*/
+.btn{
+  @include btn-reset;
+  i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    img{width: 100%;}
+    &:first-child{margin-left: 0 !important;}
+    &:last-child{margin-right:  0 !important;}
+  }
+  &:disabled{
+    opacity: .25;
+    pointer-events: none;
+    user-select: none;
+    cursor: default;
+  }
+  &-primery{
+    background-color: $clr-btn;
+    border-radius: $brs-btn;
+    color: $clr-txt-primery-contr;
+    font-weight: 500;
+    &:hover{background-color: $clr-btn-hover;}
+    &:focus{box-shadow: 0 0 0 4px lighten($clr-btn, 40%)}
+  }
+  &-secondary{
+    border: 1px solid $clr-btn;
+    border-radius: $brs-btn;
+    color: $clr-btn;
+    font-weight: 500;
+    &:hover{
+      border-color: $clr-btn-hover;
+      background-color: $clr-btn-hover;
+      color: $clr-txt-primery-contr;
+    }
+    &:focus{box-shadow: 0 0 0 4px lighten($clr-btn, 40%)}
+  }
+  &-ghost{
+    color: $clr-btn;
+    font-weight: 500;
+    &:hover{color: $clr-btn-hover;}
+    &:focus{box-shadow: 0 0 0 4px lighten($clr-btn, 40%)}
+  }
+  &--lg{
+    height: $step-xxl;
+    min-width: $step-xxl;
+    padding: 0 $step-md;
+    font-size: $txt-lg;
+    i{
+      width: $step-lg;
+      height: $step-lg;
+      margin: 0 $step-sm;      
+    }
+  }
+  &--md{
+    height: $step-xl;
+    min-width: $step-xl;
+    padding: 0 $step-sm;
+    font-size: $txt-md;
+    i{
+      width: $step-md;
+      height: $step-md;
+      margin: 0 $step-xs;      
+    }
+  }
+  &--sm{
+    height: $step-lg;
+    min-width: $step-lg;
+    padding: 0 $step-xs;
+    font-size: $txt-sm;
+    i{
+      width: $step-sm;
+      height: $step-sm;
+      margin: 0 $step-xxs;      
+    }
+  }
+  &--block{width: 100%;}
+}

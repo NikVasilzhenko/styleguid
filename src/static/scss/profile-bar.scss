@@ -1,0 +1,35 @@
+//profile bar
+.profile-bar{
+  position: relative;
+  &__wrap{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  &__drop{
+    position: absolute;
+    top: 100%;
+  }
+  &__main{
+    text-align: right;
+    margin-right: $step-sm;
+  }
+  &__name{
+    white-space: nowrap;
+    font-weight: 500;
+    font-size: $txt-lg;
+    color: $clr-txt-primery;
+    &:not(:last-child){margin-bottom: $step-xxs;}
+  }
+  &__sub{
+    white-space: nowrap;
+    color: $clr-txt-secondary;
+    font-size: $txt-sm;
+  }
+  &:hover{
+    .drop{display: block;}
+  }
+  @media only screen and (max-width : 767px){
+    &__main{display: none;}
+  }
+}

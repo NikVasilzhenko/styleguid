@@ -1,0 +1,91 @@
+.checklist{
+  .check{margin: $step-xs 0;}
+}
+.check{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start; 
+  input[type="checkbox"]{
+    @include visually-hidden;
+    &:hover{
+      .check__custom{border-color: $clr-txt-primery;}
+    }
+    & + .check__custom{
+      display: block;
+      width: $step-md;
+      height: $step-md;
+      flex-shrink: 0;
+      border: 1px solid $clr-border-primery;
+      border-radius: $brs-btn;    
+      transition: border-color $transition-time;
+      cursor: pointer;
+    }
+    &:checked + .check__custom{
+      background: url('data: image/svg+xml; utf8; base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iMjRweCIgZmlsbD0iI2ZmZiI+PHBhdGggZD0iTTAgMGgyNHYyNEgwVjB6IiBmaWxsPSJub25lIi8+PHBhdGggZD0iTTkgMTYuMkw0LjggMTJsLTEuNCAxLjRMOSAxOSAyMSA3bC0xLjQtMS40TDkgMTYuMnoiLz48L3N2Zz4=') center center no-repeat $clr-btn;
+      background-size: $txt-sm $txt-sm;
+      border-color: $clr-btn;
+    }
+    &:disabled + .check__custom{
+      opacity: $opacity-disabled;
+      cursor: default;
+      pointer-events: none;
+      user-select: none;
+    }
+    &:disabled ~ .check__txt{
+      opacity: $opacity-disabled;
+      cursor: default;
+      pointer-events: none;
+      user-select: none;
+    }
+  }
+  input[type="radio"]{
+    @include visually-hidden;    
+    & + .check__custom{
+      display: block;
+      width: $step-md;
+      height: $step-md;
+      flex-shrink: 0;
+      border: 1px solid $clr-border-primery;
+      background-color: $clr-border-primery;
+      border-radius: 50%; 
+      box-shadow: 0 0 0 2px $clr-bg-primery inset;
+      transition: border-color $transition-time, background-colo $transition-time;
+      cursor: pointer;
+    }
+    &:checked + .check__custom{
+      background-color: $clr-btn;
+      border-color: $clr-btn;
+    }
+    &:disabled + .check__custom{
+      opacity: $opacity-disabled;
+      cursor: default;
+      pointer-events: none;
+      user-select: none;
+    }
+    &:disabled ~ .check__txt{
+      opacity: $opacity-disabled;
+      cursor: default;
+      pointer-events: none;
+      user-select: none;
+    }
+  }
+  &__txt{
+    margin-left: $step-xs;
+    line-height: $step-md;
+    cursor: pointer;
+  }  
+  &:hover{
+    input[type="checkbox"]:not(:checked) + .check__custom{border-color: $clr-txt-secondary;}
+    input[type="checkbox"]:disabled:checked + .check__custom{border-color: $clr-btn;}
+    input[type="checkbox"]:disabled + .check__custom{border-color: $clr-border-primery;}
+    
+    input[type="radio"]:not(:checked) + .check__custom{
+      border-color: $clr-txt-secondary;
+      background-color: $clr-txt-secondary;
+    }
+    input[type="radio"]:disabled + .check__custom{
+      border-color: $clr-border-primery;
+      background-color: $clr-border-primery;
+    }
+  }
+}

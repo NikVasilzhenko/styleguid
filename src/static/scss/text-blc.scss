@@ -1,0 +1,80 @@
+.text-blc{
+  & > *{
+    &:first-child{margin-top: 0 !important;}
+    &:last-child{margin-bottom: 0 !important;}
+  }
+  h1{
+    font-size: $txt-xxl;
+    font-weight: 500;
+    margin: $txt-xl 0;
+  }
+  h2{
+    font-size: $txt-xl;
+    font-weight: 500;
+    margin: $txt-xl 0;
+  }
+  h3{
+    font-size: $txt-lg;
+    font-weight: bold;
+    margin: $txt-lg 0;
+  }
+  h4{
+    font-size: $txt-md;
+    font-weight: bold;
+    margin: $txt-md 0;
+  }
+  p{
+    margin: 1em 0;
+    line-height: 1.5;
+  }
+  a{
+    color: $clr-link;
+    text-decoration: underline;
+    &:hover{color: $clr-link-hover;}
+  }
+  b, strong{font-weight: bold;}
+  ul, ol{
+    margin: 1em 0;
+    line-height: 1.5;
+    li{
+      position: relative;
+      padding-left: $step-lg;
+      &:not(:last-child){margin-bottom: $step-xxs;}
+    }
+  }
+  ul{
+    li{      
+      &::before{
+        content: '·';
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-weight: bold;
+      }
+    }
+  }
+  ol{counter-reset: num;}
+  ol{
+    li{
+      &::before{
+        content: counter(num) '.'; 
+        counter-increment: num;
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-weight: 500;
+      }
+    }
+  }
+  blockquote{
+    margin: 1em 0;
+    padding-left: calc(#{$step-lg} - 2px);
+    border-left: 2px solid $clr-txt-primery-contr;
+    p{
+      font-style: italic;
+      &::before{content: '« '}
+      &::after{content: ' »'}
+    }
+    cite{font-weight: 500;}
+  }
+}

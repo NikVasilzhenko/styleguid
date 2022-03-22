@@ -1,0 +1,23 @@
+.label{
+  display: block;
+  position: relative;
+  margin: $step-md 0;
+  &__title{
+    display: block;
+    font-size: $txt-md;
+    font-weight: 500;
+    margin-bottom: $step-xxs;
+  }
+  &__txt{
+    display: block;
+    font-size: $txt-sm;
+    margin-top: $step-xxs;
+    color: $clr-txt-secondary;
+  }
+  &__error{
+    display: block;
+    font-size: $txt-sm;
+    margin-top: $step-xxs;
+    color: $clr-error;
+  }
+}

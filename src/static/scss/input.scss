@@ -1,0 +1,62 @@
+/*form*/
+.input{
+  @include input-reset;
+  /*my styles*/
+  color: $clr-input;
+  border: 1px solid $clr-border-primery;
+  border-radius: $brs-btn;
+  font-size: $txt-md;
+  &:hover{border-color: $clr-txt-primery;}
+  &:focus{border-color: $clr-txt-primery;}
+  &--lg{
+    height: $step-xxl;
+    line-height: calc(#{$step-xxl} - 2px);
+    padding: 0 $step-md;
+  }
+  &--md{
+    height: $step-xl;
+    line-height: calc(#{$step-xl} - 2px);
+    padding: 0 $step-md;
+  }
+  &::-webkit-input-placeholder{opacity: 1; color: $clr-placeholder;}
+  &::-moz-placeholder{opacity: 1; color: $clr-placeholder;}
+  &:-moz-placeholder{opacity: 1; color: $clr-placeholder;}
+  &:-ms-input-placeholder{opacity: 1; color: $clr-placeholder;}
+  &:placeholder{opacity: 1;color: $clr-placeholder;}
+  &:-webkit-autofill {
+    -webkit-box-shadow: inset 0 0 0 100px $clr-bg-primery !important;
+    -webkit-text-fill-color: $clr-input !important;
+    color: $clr-input !important;
+  }
+  &.error{
+    border-color: $clr-error;
+    color: $clr-error;
+    &::-webkit-input-placeholder{color: $clr-error;}
+    &::-moz-placeholder{color: $clr-error;}
+    &:-moz-placeholder{color: $clr-error;}
+    &:-ms-input-placeholder{color: $clr-error;}
+    &:placeholder{color: $clr-error;}
+  }
+  &:focus:required:valid{color: $clr-input;}
+  &:required:valid{color: $clr-input;}
+  &:disabled{
+    opacity: $opacity-disabled;
+    cursor: default;
+    user-select: none;
+    pointer-events: none;
+    border-color: $clr-border-primery;
+  }
+}
+
+
+
+
+.textarea{
+  /*reset*/
+  @include textarea-reset; 
+  @extend .input;
+  /*my styles*/
+  
+}
+.textarea:focus:required:invalid{color: $clr-input;}
+.textarea:required:valid{color: $clr-input;}
