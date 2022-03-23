@@ -10,6 +10,7 @@
     &:first-child{margin-left: 0 !important;}
     &:last-child{margin-right:  0 !important;}
   }
+  &.disabled,
   &:disabled{
     opacity: .25;
     pointer-events: none;
