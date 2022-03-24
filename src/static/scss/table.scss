@@ -1,0 +1,43 @@
+.table-overlay{
+  overflow: auto;
+  &::-webkit-scrollbar {
+    height: $step-xs;
+    width: $step-xs;
+  }
+  &::-webkit-scrollbar-track {
+    background: none;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    outline: none;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $clr-txt-secondary-contr;
+    background-color: $clr-txt-secondary-contr;
+    border-radius: 0;
+    border: none;
+    cursor: grab;
+    &:hover{
+      background: $clr-txt-primery-contr;
+      background-color: $clr-txt-primery-contr;
+    }
+  }
+}
+.table{
+  min-width: 100%;
+  border-collapse: collapse;
+  th{
+    background-color: $clr-bg-secondary;
+    color: $clr-txt-primery-contr;
+    padding: $step-sm;
+    font-size: $txt-md;
+    font-weight: 500;
+    text-align: left;
+    white-space: nowrap;
+  }
+  td{
+    border-bottom: 1px solid $clr-border-primery;
+    padding: $step-sm;
+    font-size: $txt-md;
+  }
+}
